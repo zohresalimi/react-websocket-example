@@ -6,6 +6,9 @@ import ForgetPassword from "../ForgetPassword";
 
 import "./style.css";
 
+/**
+ * Websocket URL is stored in a .env file
+ */
 const socketUrl = process.env.REACT_APP_WS_URL;
 export default function LoginPage() {
   const [modalShow, setModalShow] = useState(false);
@@ -26,7 +29,12 @@ export default function LoginPage() {
     [ReadyState.UNINSTANTIATED]: "Uninstantiated",
   }[readyState];
 
-  console.log("connectionStatus", connectionStatus);
+  /**
+   * This useEffect will be called only once component
+   * is mounted to the page, it means that the `sendJsonMessage`
+   * only get called once and we don't subscribe on a topic
+   * multiple times
+   */
   useEffect(() => {
     sendJsonMessage({ topic: "subscribe", to: "EURUSD:CUR" });
   }, []);
@@ -38,6 +46,10 @@ export default function LoginPage() {
     return updateFormData({ ...formData, [name]: value });
   };
 
+  /**
+   * This will act as a computed propery which keeps
+   * updated with any changes in the form
+   */
   const isFormValid = useMemo(
     () => formData.userName !== "" && formData.password !== "",
     [formData.userName, formData.password]
@@ -47,6 +59,12 @@ export default function LoginPage() {
     if (isFormValid) {
       try {
         setIsLoading(true);
+        /**
+         * There should be an endpoint on server side
+         * to handle login functionality, but since
+         * there is no backend, I just called to an artificial
+         * endpoint /login
+         */
         const response = await fetch("/login", {
           method: "POST",
           body: JSON.stringify(formData),
