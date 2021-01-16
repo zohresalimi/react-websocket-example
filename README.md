@@ -26,3 +26,10 @@ $ yarn start
 ```
 
 Note: we used `yarn` to setup this project, however, if you want to use `npm` instead, do not forget to delete the `yarn.lock` file first.
+
+# To run locally
+
+```sh
+$ yarn global add serve
+$ yarn serve
+```
