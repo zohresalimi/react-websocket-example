@@ -129,6 +129,7 @@ export default function LoginPage() {
                   </Row>
                   <Row className="mt-50">
                     <Col xs={1}>
+                      {/* This will show a flashing color circle indicating websocket connection */}
                       <div className={`circle mt-1 ${connectionStatus}`}></div>
                     </Col>
                     <Col>
