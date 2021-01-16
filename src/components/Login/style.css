@@ -1,0 +1,128 @@
+.login-box {
+  width: 100%;
+  margin: auto;
+  max-width: 525px;
+  min-height: 670px;
+  position: relative;
+  background: url(https://images.unsplash.com/photo-1507208773393-40d9fc670acf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1268&q=80)
+    no-repeat center;
+  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.login {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  padding: 90px 70px 50px 70px;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.login .tab,
+.input-wrapper .group .label,
+.input-wrapper .group .button {
+  text-transform: uppercase;
+}
+
+.input-wrapper {
+  min-height: 345px;
+  position: relative;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.input-wrapper .group {
+  margin-bottom: 15px;
+}
+
+.input-wrapper .group .label,
+.input-wrapper .group .input,
+.input-wrapper .group .button {
+  width: 100%;
+  color: #fff;
+  display: block;
+}
+
+.input-wrapper .group .input {
+  border: none;
+  padding: 25px 20px;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.input-wrapper .group .button {
+  border: none;
+  padding: 15px 20px;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.input-wrapper .group .label {
+  color: #fff;
+  font-size: 15px;
+}
+
+.input-wrapper .group .button {
+  background: #1161ee;
+}
+
+.foot {
+  text-align: center;
+}
+
+.last-detail {
+  color: #767b7f;
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.last-detail span {
+  color: #fff;
+  font-size: 18px;
+}
+
+.circle {
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  opacity: 0.25;
+}
+.Connecting {
+  background-color: red;
+  -webkit-animation: up-right 1s infinite;
+  -moz-animation: up-right 1s infinite;
+  -o-animation: up-right 1s infinite;
+  animation: up-right 1s infinite;
+}
+.Open {
+  background-color: green;
+  -webkit-animation: up-right 1s infinite;
+  -moz-animation: up-right 1s infinite;
+  -o-animation: up-right 1s infinite;
+  animation: up-right 1s infinite;
+}
+.Closed {
+  background-color: gray;
+  -webkit-animation: up-right 1s infinite;
+  -moz-animation: up-right 1s infinite;
+  -o-animation: up-right 1s infinite;
+  animation: up-right 1s infinite;
+}
+
+@keyframes up-right {
+  0% {
+    transform: scale(1);
+    opacity: 0.25;
+  }
+  50% {
+    transform: scale (1, 5);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.25;
+  }
+}

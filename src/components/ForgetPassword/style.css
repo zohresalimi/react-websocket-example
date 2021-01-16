@@ -1,0 +1,31 @@
+.modal-content .btn.close {
+  z-index: 9;
+  float: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 13px;
+  top: 13px;
+  width: 35px;
+  height: 35px;
+  opacity: 0.3;
+}
+.modal-content .btn.close:hover {
+  opacity: 1;
+}
+.modal-content .btn.close:before,
+.modal-content .btn.close:after {
+  position: absolute;
+  left: 15px;
+  content: " ";
+  height: 20px;
+  width: 2px;
+  background-color: #333;
+}
+.modal-content .btn.close:before {
+  transform: rotate(45deg);
+}
+.modal-content .btn.close:after {
+  transform: rotate(-45deg);
+}
